@@ -29,18 +29,19 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Store Js in redux
 
+```
 import { createStore } from "redux";
 
 const reducerFn = (state = { counter: 0 }, action) => {
 
     if (action.type === 'inc') {
-        return { counter: state.counter + 1 }
+        return { state.counter + 1 }
     }
     else if (action.type === 'dec') {
-        return { counter: state.counter - 1 }
+        return { state.counter - 1 }
     }
     else if (action.type === 'add') {
-        return { counter: state.counter + action.payload }
+        return { state.counter + action.payload }
     }
     return state;
 
@@ -50,8 +51,11 @@ const store = createStore(reducerFn)
 
 export default store;
 
+```
+
 ### App Js in redux
 
+```
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 
@@ -84,6 +88,7 @@ Counter App
 }
 
 export default App;
+```
 
 ### Redux Toolkit
 
@@ -109,6 +114,7 @@ It accepts an object of reducer functions, a slice name, and an initial state va
 
 ### Store Js in redux-toolkit
 
+```
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({
@@ -171,6 +177,7 @@ Counter App
 }
 
 export default App;
+```
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 

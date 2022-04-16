@@ -4,23 +4,22 @@ const counterReducer = (state = { counter: 0 }, action) => {
 
     if (action.type === 'inc') {
         return {
-            state: state.counter + 1
+            counter: state.counter + 1
         }
     }
     else if (action.type === 'dec') {
         return {
-            state: state.counter - 1
+            counter: state.counter - 1
         }
     }
     else if (action.type === 'add') {
         return {
-            state: state.counter + action.payload
+            counter: state.counter + action.payload
         }
     }
 
-    return {
-        state
-    }
+    return state;
+
 
 }
 
